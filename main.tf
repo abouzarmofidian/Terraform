@@ -17,3 +17,21 @@ resource "aws_subnet" "my-subnet" {
   }
 
 }
+
+#Internet Gateway
+resource "aws_internet_gateway" "my-internet-gateway" {
+  vpc_id = aws_vpc.my-vpc.id
+  tags = {
+    Name = var.internet_gateway_name
+  }
+}
+
+# Route Table
+resource "aws_default_route_table" "default_route" {
+  default_route_table_id = aws_vpc.my-vpc.default_route_table_id
+
+  route {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = aws_internet_gateway.my-internet-gateway.id
+  }
+}
