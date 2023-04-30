@@ -40,7 +40,7 @@ resource "aws_security_group" "database_sg" {
     protocol        = "tcp"
     security_groups = [aws_security_group.web_server_sg.id]
   }
-  
+
   egress {
     from_port   = 0
     to_port     = 0

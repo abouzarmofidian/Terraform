@@ -19,9 +19,9 @@ variable "vpc_cidr" {
 }
 
 variable "public_subnet1_cidr" {
-  type    = string
+  type        = string
   description = "Public Subnet 1 cidr block"
-  default = "10.10.1.0/24"
+  default     = "10.10.1.0/24"
 }
 
 variable "subnet1_availability_zone" {
@@ -30,9 +30,9 @@ variable "subnet1_availability_zone" {
 }
 
 variable "public_subnet2_cidr" {
-  type    = string
+  type        = string
   description = "Public Subnet 2 cidr block"
-  default = "10.10.2.0/24"
+  default     = "10.10.2.0/24"
 }
 
 variable "subnet2_availability_zone" {
@@ -41,15 +41,15 @@ variable "subnet2_availability_zone" {
 }
 
 variable "private_subnet1_cidr" {
-   type = string
-   description = "Private Subnet 1 cidr block"
-   default = "10.10.3.0/24"  
+  type        = string
+  description = "Private Subnet 1 cidr block"
+  default     = "10.10.3.0/24"
 }
 
 variable "private_subnet2_cidr" {
-   type = string
-   description = "Private Subnet 2 cidr block"
-   default = "10.10.4.0/24"  
+  type        = string
+  description = "Private Subnet 2 cidr block"
+  default     = "10.10.4.0/24"
 }
 
 variable "route_table_cidr" {
@@ -71,6 +71,6 @@ variable "instance_type" {
 }
 
 variable "cidr_open" {
-  type        = string
-  default     = "0.0.0.0/0"
+  type    = string
+  default = "0.0.0.0/0"
 }

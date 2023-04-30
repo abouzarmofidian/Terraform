@@ -44,11 +44,11 @@ resource "aws_subnet" "public_subnet2" {
 
 #Private Subnet1
 resource "aws_subnet" "private_subnet1" {
-  vpc_id = aws_vpc.vpc.id
-  cidr_block = var.private_subnet1_cidr
+  vpc_id                  = aws_vpc.vpc.id
+  cidr_block              = var.private_subnet1_cidr
   map_public_ip_on_launch = true
-  availability_zone = var.subnet1_availability_zone
-  depends_on = [ aws_vpc.vpc ]
+  availability_zone       = var.subnet1_availability_zone
+  depends_on              = [aws_vpc.vpc]
 
   tags = {
     Name = "private_subnet1"
@@ -57,11 +57,11 @@ resource "aws_subnet" "private_subnet1" {
 
 #Private Subnet2
 resource "aws_subnet" "private_subnet2" {
-  vpc_id = aws_vpc.vpc.id
-  cidr_block = var.private_subnet2_cidr
+  vpc_id                  = aws_vpc.vpc.id
+  cidr_block              = var.private_subnet2_cidr
   map_public_ip_on_launch = true
-  availability_zone = var.subnet2_availability_zone
-  depends_on = [ aws_vpc.vpc ]
+  availability_zone       = var.subnet2_availability_zone
+  depends_on              = [aws_vpc.vpc]
 
   tags = {
     Name = "private_subnet2"
