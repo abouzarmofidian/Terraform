@@ -3,10 +3,16 @@
 ####################
 ```
 ch0: 
-+ provider: AWS
-+ Resources: VPC-Subnet--Internet GW-- Route table--Security group--EC2 instance
++ Provider: AWS
++ Resources: VPC, Subnet, Internet_GW, Route_table, Security_group, EC2_instance
+
 ch01:
-+ title: Terraform, Amazon EC2, and Jenkins
++ Title: Terraform, Amazon EC2, and Jenkins
 + provider: AWS
-+ Resources: EC2 instance--Security group--S3-bucket--IAM
++ Resources: EC2_instance, security_group, S3_bucket, IAM
+
+ch02:
++ Title: Building a Two-Tier Architecture in AWS using Terraform
++ Provider: AWS
++ Resources: VPC, Subnet, internet_gateway, route_table, route_table_association, EC2_instance, db_subnet_group, db_instance, security_group 
 ```
